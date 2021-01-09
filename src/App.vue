@@ -13,7 +13,7 @@
             :deleteVehicleQueue="deleteVehicleQueue"
             :vehicleQueue="vehicleQueue"
       />
-      <div>{{ this.uploadVehiclesQueue() }}</div>
+      <!-- <div>{{ this.uploadVehiclesQueue() }}</div> -->
 </template>
 <script>
 import GuiInterface from "./components/GuiInterface.vue";
@@ -99,7 +99,8 @@ export default {
                               (e, index) => {
                                     return index !== ind;
                               }
-                        ));
+                        )),
+                        this.uploadVehiclesQueue() 
             },
             deleteVehicleQueue(ind) {
                   this.vehicleQueue = this.vehicleQueue.filter((e, index) => {
